@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.png">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <main>
+        <h1>Tic Tac Toe</h1>
+        <table>
+            <tr>
+                <th class="b-right"></th>
+                <th></th>
+                <th class="b-left"></th>
+            </tr>
+            <tr>
+                <th class="b-up-down"></th>
+                <th class="b-up-down b-left b-right"></th>
+                <th class="b-up-down"></th>
+            </tr>
+            <tr>
+                <th class="b-right"></th>
+                <th></th>
+                <th class="b-left"></th>
+            </tr>
+        </table>
+        <div id="div-pont">
+            <div id="player1">
+                <div class="quadro">
+                    <h4>+1</h4><div class="pont"><span>2</span></div>
+                </div>
+                <p>O</p>
+            </div>
+            <div id="player2">
+                <div class="quadro">
+                    <div class="pont"><span>2</span></div><h4>+1</h4>
+                </div>
+                <p>X</p>
+            </div>
+        </div>
+        <div id="end" class="">
+            <button id="play-again" class="win-bt">Play Again!</button>
+            <button id="reset" class="win-bt">Reset!</button>
+        </div>
+        
+    </main>
+    <script src="javascript/script.js"></script>
+</body>
+</html>

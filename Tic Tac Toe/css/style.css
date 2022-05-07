@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+}
+
+h1 {
+    color: #ffe000;
+    text-shadow: 0 4px rgb(255, 123, 0);
+    font-size: 50px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 50px;
+}
+
+.b-left {
+    border-left: 5px solid #00ff82;
+}
+
+.b-right {
+    border-right: 5px solid #00ff82;
+}
+
+.b-up-down {
+    border-top: 5px solid #00ff82;
+    border-bottom: 5px solid #00ff82;
+}
+
+th {
+    width: 60px;
+    height: 80px;
+    padding: 10px;
+    margin: 10px;
+
+    background-color:rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#div-pont {
+    padding: 20px 35%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pont {
+    margin: 0 20px;
+    font: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 80px;
+}
+
+.pont span {
+    font-size: larger;
+}
+
+.quadro {
+    display: inline-flex;
+    align-items: center;
+}
+
+.quadro-animation {
+    position: relative;
+    animation: bounce 1.5s ease-in-out .1s;
+}
+
+.quadro h4 {
+    visibility: hidden;
+    color: #ff7a00;
+    font-size: x-large;
+    opacity: 0;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); visibility: visible;}
+    10%  { transform: scale(1.1,1.2) translateY(0); opacity: 1;}
+    30%  { transform: scale(1.2,1.1)   translateY(-55px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    58%  { transform: scale(1,1) translateY(-7px); }
+    65%  { transform: scale(1,1) translateY(0);}
+    100% { transform: scale(1,1) translateY(0);opacity: 0;}
+}
+
+@-webkit-keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-55px);}
+}   
+
+#player1 .pont {
+    box-shadow: -5px 5px #5271ff;
+    background-color: #38b6ff;
+    color: white;
+}
+
+#player1 p {
+    color: #38b6ff;
+    margin: 0;
+    font-size: x-large;
+}
+
+#player2 .pont {
+    box-shadow: 5px 5px #db0404;
+    background-color: #ff2e2e;
+    color: white;
+}
+
+#player2 p {
+    color: #ff1e00;
+    margin: 0;
+    font-size: x-large;
+}
+
+#end {
+    visibility: hidden;
+}
+
+.win-bt {
+    border: 0;
+    border-radius: 5%;
+    height: 50px;
+    width: 150px;
+    font-size: large;
+    margin: 0 20px;
+    padding: 10px;
+    color: white;
+    background-color: #5000fc;
+    cursor: pointer;
+    transition:cubic-bezier(0.175, 0.885, 0.32, 1.275) 900ms;
+}
+
+#play-again:hover {
+    font-size: larger;
+    box-shadow: -5px 5px #1f0063;
+    transition:cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+}
+
+#reset:hover {
+    font-size: larger;
+    box-shadow: 5px 5px #1f0063;
+    transition:cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+}
