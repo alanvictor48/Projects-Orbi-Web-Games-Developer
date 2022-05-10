@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Questrial', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/*
+    Genius Grid
+*/
+
+.genius {
+    display: grid;
+    grid-template-areas: 'r g' 'b y';
+    grid-gap: 3px;
+    border: 2px solid black;
+    border-radius: 100%;
+    background-color: black;
+    width: 500px;
+    height: 500px;
+}
+
+.green {
+    grid-area: g;
+    background-color: green;
+    opacity: .8;
+    border-top-right-radius: 100%;
+}
+
+.blue {
+    grid-area: b;
+    background-color: blue;
+    opacity: .8;
+    border-bottom-left-radius: 100%;
+}
+
+.red {
+    grid-area: r;
+    background-color: red;
+    opacity: .8;
+    border-top-left-radius: 100%;
+}
+
+.yellow {
+    grid-area: y;
+    background-color: yellow;
+    opacity: .8;
+    border-bottom-right-radius: 100%;
+}
+
+/*
+    Class for events
+*/
+
+.light {
+    opacity: 1;
+}
+
+.erro {
+    border: 5px solid red;
+}
+
+.clickable {
+    cursor: pointer;
+    border: 3px solid white;
+}
+
+/*
+    Menu Central
+*/
+
+#menu {
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    border-radius: 100%;
+    background-color: black;
+}
+
+#main-menu {
+    display: grid;
+    grid-template-areas: 'title' 'score' 'bt';
+    width: 13em;
+    height: 13em;
+    background-color: white;
+    color: white;
+    border: 2px solid white;
+    border-radius: 100%;
+    margin: 1em 1em;
+    overflow: hidden;
+}
+
+h1 {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    margin-top: 0;
+    background-color: black;
+}
+
+/*
+    Score
+*/
+
+#center-score {
+    grid-area: score;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    width: 100%;
+    height: 50%;
+    margin-top: 1em;
+}
+
+.score {
+    background-color: #0e67a1;
+    color: white;
+    font-size: larger;
+    text-align: center;
+    padding: .3em 1em;
+    border-radius: 10px;
+}
+
+.panels {
+    text-align: center;
+}
+
+.panels p{
+    margin-bottom: 0;
+}
+
+/*
+    CheckBox
+*/
+
+label input {
+    display: none;
+}
+
+label span {
+    width: 12px;
+    height: 12px;
+    display: block;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+label input:checked + span {
+    background-color: rgb(0, 255, 0);
+}
+
+/*
+    Play Button
+*/
+
+#play-div {
+    grid-area: bt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#play {
+    background-color: hwb(132deg 4% 23%);
+    border: 0;
+    border-radius: 15%;
+    height: 40px;
+    width: 60px;
+    color: white;
+    font-size: larger;
+    cursor: pointer;
+}
